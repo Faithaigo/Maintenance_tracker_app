@@ -10,64 +10,108 @@
 <body>
         <div class="nav">
                 <a href="login.html">USER LOGIN</a>
-                <a href="index.html">USER SIGNUP</a>
+                <a href="signup.html">USER SIGNUP</a>
                 <a href="adminlogin.html">ADMIN LOGIN</a>
                 <a href="request.html">SEND REQUEST</a>
                 <a href="adminview.html">USER REQUESTS</a>
         </div>
-        <center>
-            <input type="text" placeholder="Search for Department">
+
+        <div class="sidenav">
+            <a href="#">Approved Requests</a><br><p>
+            <a href="#">Rejected Requests</a><br><p>
+            <a href="#">Requests Resolved<a><br><p>
+          <a href="#">Filter Requests</a><br><p>
+          <form id="frmfilter">
+                <label>Search by item</label><br><p>
+                <select id="item">
+                    <option selected="none">none</option>
+                    <option id="pen">pen</option>
+                    <option id="book">Notebook</option>
+                    <option id="print">Printer</option>
+                    <option id="desk">Desktop</option>
+                    <option id="paper">paper</option>
+                    <option id="key">Keyboard</option>
+                </select><br><p>
+                     
+                    <label> Search by Department</label><br><p>
+                    <select id="dept">
+                            <option selected="none">none</option>
+                            <option id="it">IT</option>
+                            <option id="hr">Human resource</option>
+                            <option id="mkt">Marketing</option>
+                            <option id="fin">Finance and Administration</option>
+                        </select><br><p>
+                        
+                <button class="btnfilter">Filter Request</button>
+                           
+            </form> 
+           
+          </div>
+          <div class="content">
+           <h2>RECEIVED USER REQUESTS</h2>
             <table style="width: 100%">
                 <tr>
-                    <td><b>Name</b></td>
-                    <td><b>Item</b></td>
-                    <td><b>Description</b></td>
-                    <td><b>Department</b></td>
-                    <td><b>Date</b></td>
-                    <td><b>Status</b></td>
+                    <th><b>Name</b></th>
+                    <th><b>Item</b></td>
+                    <th><b>Description</b></th>
+                    <th><b>Department</b></th>
+                    <th><b>Date</b></th>
+                    <th><b>Status</b></th>
+                    <th>Resolve</th>
                 </tr>
                 <tr>
-                    <td>Faith</td>
+                    <td>Faith A</td>
                     <td>printer</td>
                     <td>Ink lacking</td>
                     <td>IT</td>
-                    <td> err</td>
+                    <td>12/06/2018</td>
                     <td>pending</td>
+                    <td><input type="checkbox" name="chk1">&nbsp;</td>
                 </tr>
                 <tr>
-                        <td>Faith</td>
-                        <td>printer</td>
-                        <td>Ink lcking</td>
-                        <td>IT</td>
-                        <td> err</td>
-                        <td>pending</td>
+                        <td>Doreen</td>
+                        <td>pens</td>
+                        <td>Need more pens in the department</td>
+                        <td>Finance and Administration</td>
+                        <td>10/06/2018</td>
+                        <td>Approved</td>
+                        <td><input type="checkbox" name="chk2">&nbsp;</td>
                     </tr>
                     <tr>
-                            <td>Faith</td>
-                            <td>printer</td>
-                            <td>Ink lcking</td>
-                            <td>IT</td>
-                            <td> err</td>
+                            <td>Grace</td>
+                            <td>Paper</td>
+                            <td>Lacking reams </td>
+                            <td>Human Resource</td>
+                            <td>05/06/2018</td>
                             <td>pending</td>
+                            <td><input type="checkbox" name="chk3">&nbsp;</td>
                         </tr>
                         <tr>
-                                <td>Faith</td>
-                                <td>printer</td>
-                                <td>Ink lcking</td>
-                                <td>IT</td>
-                                <td> err</td>
+                                <td>Veronica</td>
+                                <td>Keyboard</td>
+                                <td>keyboard not functioning</td>
+                                <td>Marketting</td>
+                                <td>03/06/2018</td>
                                 <td>pending</td>
+                                <td><input type="checkbox" name="chk4">&nbsp;</td>
                             </tr>
                             <tr>
-                                    <td>Faith</td>
-                                    <td>printer</td>
-                                    <td>Ink lcking</td>
+                                    <td>Ritah</td>
+                                    <td>Notebooks</td>
+                                    <td>Notebooks finished</td>
                                     <td>IT</td>
-                                    <td> err</td>
+                                    <td>01/06/2018</td>
                                     <td>pending</td>
+                                    <td><input type="checkbox" name="chk5">&nbsp;</td>
                                 </tr>
             </table>
-    </center>
+            <center>
+            <button class="btnapprove">Approve Request</button>
+            <button class="btnreject" onclick="info()">Reject Request</button>
+        </center>
+
+        </div> 
+    
     
 </body>
 </html>
