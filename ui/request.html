@@ -18,11 +18,11 @@
         <center>
     <h2>MAKING MENTENANCE OR REPAIR REQUEST</h2>
     <P><b>Please submit in your request here</b></P>
-    <form>
+    <form name="requestform">
         <label>Enter Name</label><br><p>
-        <input id="name" type="text"><br><p>
+        <input id="name" type="text" name="uname"><br><p>
         <label>Request for</label><br><p>
-        <select id="item">
+        <select name="item" >
             <option selected="none">none</option>
             <option id="pen">pen</option>
             <option id="book">Notebook</option>
@@ -32,22 +32,71 @@
             <option id="key">Keyboard</option>
         </select><br><p>
             <p><label>Description </label><br />
-                <textarea  id="details" placeholder="Enter details here" cols="20" rows="5"></textarea><br><p>
+                <textarea  id="details" name="udetails" placeholder="Enter details here" cols="20" rows="5"></textarea><br><p>
                 
             <label>Department</label><br><p>
-            <select id="dept">
+            <select name="dept">
                     <option selected="none">none</option>
-                    <option id="it">IT</option>
-                    <option id="hr">Human resource</option>
-                    <option id="mkt">Marketing</option>
-                    <option id="fin">Finance and Administration</option>
+                    <option id="it" name="It">IT</option>
+                    <option id="hr" name="hrm">Human resource</option>
+                    <option id="mkt" name="mrkt">Marketing</option>
+                    <option id="fin" name="finan">Finance and Administration</option>
                 </select><br><p>
                 <p><label>Date</label><br />
-        <input id="date" type="date" name="date"></p>
+        <input id="date" type="date" name="ldate"></p>
         <button class="btnsubmit">Submit Request</button>
-        <button class="btnview">View Request</button>
+        <button type="submit" class="btnview" onclick="viewinfo()" >View Request</button>
                    
     </form>
+    <script>
+        function viewinfo(){
+            var name1=document.requestform.uname.value;
+            var description=document.requestform.udetails.value;
+            var items=document.requestform.item.value;
+            if(document.getElementById('pen').checked){
+                items=document.getElementById('pen').value;
+            }
+            else if(document.getElementById('book').checked){
+                items=document.getElementById('book').value;
+            }
+            else if(document.getElementById('print').checked){
+                items=document.getElementById('print').value;
+            }
+
+             else if(document.getElementById('desk').checked){
+                items=document.getElementById('desk').value;
+            }
+            else if(document.getElementById('paper').checked){
+                items=document.getElementById('paper').value;
+            }
+            else if(document.getElementById('key').checked){
+                items=document.getElementById('key').value;
+            }
+            var date1=document.requestform.ldate.value;
+            var department=document.requestform.dept.value;
+            if(document.getElementById('it').checked){
+                department=document.getElementById('it').value;
+            }
+            else if(document.getElementById('hr').checked){
+                department=document.getElementById('hr').value;
+            }
+            else if(document.getElementById('mkt').checked){
+                department=document.getElementById('mkt').value;
+            }
+
+             else if(document.getElementById('fin').checked){
+                department=document.getElementById('fin').value;
+            }
+            document.write("<h3>Here is your information</h3> <br>");
+            document.write("<b>Name:</b>"+ name1 + "<br><p>");
+                document.write("<b>Item:</b>"+ items +"<br><p>");
+            document.write("<b>Description:</b>" + description+"<br><p>");
+            document.write("<b>Department:</b>"+ department +"<br><p>");
+            document.write("<b>Date:</b>"+ date1+"<br><p>");
+            
+           
+        }
+    </script>
 </center>
    
 </body>
