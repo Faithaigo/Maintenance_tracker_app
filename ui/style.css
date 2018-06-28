@@ -1,5 +1,5 @@
 body{
-    background-image: url(images/image2.jpg);
+    background-image: url(images/imag.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -31,7 +31,7 @@ input[type="text"],[type="password"],[type="email"],[type="date"],select,textare
     color:rgb(37, 9, 9);
     font-style: italic;
     border: none;
-    background-color: rgb(217, 240, 224);
+    background-color: rgb(244, 244, 245);
 
     
 
@@ -128,7 +128,7 @@ tr:nth-child(odd) {
     padding: 10px;
     border-radius: 15px;
     margin: 15px;
-    background-color:rgb(236, 236, 248);
+    background-color:rgb(132, 247, 184);
     cursor: pointer;
     border: none;
 
